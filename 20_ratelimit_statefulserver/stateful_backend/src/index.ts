@@ -1,10 +1,11 @@
-import { games } from "./store";
+import { GameManager } from "./GameManager";
 import { startLogger } from "./logger";
 
 startLogger();
 
 setInterval(() => {
-    games.push({
+    GameManager.getInstance().addGame({
+        id: Math.random().toString(),
         "whitePlayer": "harkirat",
         "blackPlayer": "jaskirat",
         moves: []
