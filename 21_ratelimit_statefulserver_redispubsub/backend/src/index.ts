@@ -18,7 +18,7 @@ app.post('/generate-otp', (req, res) => {
     // const otp = 11111;
 
     otpStore[email] = otp;
-
+    
     console.log(`OTP for ${email}: ${otp}`); // Log the OTP to the console
     res.status(200).json({ message: "OTP generated and logged" });
 });
